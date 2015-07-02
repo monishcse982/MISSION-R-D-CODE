@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LINKED LIST ADDER 2", "LINKED LIST ADDER 2\LINKED LIST ADDER 2.vcxproj", "{BF18B98C-2F63-42B8-BC5C-E6ED1F8D7F77}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF18B98C-2F63-42B8-BC5C-E6ED1F8D7F77}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BF18B98C-2F63-42B8-BC5C-E6ED1F8D7F77}.Debug|Win32.Build.0 = Debug|Win32
+		{BF18B98C-2F63-42B8-BC5C-E6ED1F8D7F77}.Release|Win32.ActiveCfg = Release|Win32
+		{BF18B98C-2F63-42B8-BC5C-E6ED1F8D7F77}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

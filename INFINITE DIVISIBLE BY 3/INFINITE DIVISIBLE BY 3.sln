@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "INFINITE DIVISIBLE BY 3", "INFINITE DIVISIBLE BY 3\INFINITE DIVISIBLE BY 3.vcxproj", "{70E5D3AB-2DB6-4A49-96B5-096136FD170A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70E5D3AB-2DB6-4A49-96B5-096136FD170A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{70E5D3AB-2DB6-4A49-96B5-096136FD170A}.Debug|Win32.Build.0 = Debug|Win32
+		{70E5D3AB-2DB6-4A49-96B5-096136FD170A}.Release|Win32.ActiveCfg = Release|Win32
+		{70E5D3AB-2DB6-4A49-96B5-096136FD170A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,17 @@
+﻿Build started 9/1/2014 11:59:51 PM.
+     1>Project "G:\MISSION R&D\C ONLINE COURSE\S3Q8\S3Q8\S3Q8.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\S3Q8.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\S3Q8.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt S3Q8.cpp
+         S3Q8.cpp
+     1>g:\mission r&d\c online course\s3q8\s3q8\s3q8.cpp(171): warning C4715: 'construct_tree' : not all control paths return a value
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\MISSION R&D\C ONLINE COURSE\S3Q8\Debug\S3Q8.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\MISSION R&D\C ONLINE COURSE\S3Q8\Debug\S3Q8.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\MISSION R&D\C ONLINE COURSE\S3Q8\Debug\S3Q8.lib" /MACHINE:X86 Debug\S3Q8.obj
+         Debug\stdafx.obj
+         S3Q8.vcxproj -> G:\MISSION R&D\C ONLINE COURSE\S3Q8\Debug\S3Q8.exe
+     1>Done Building Project "G:\MISSION R&D\C ONLINE COURSE\S3Q8\S3Q8\S3Q8.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.44

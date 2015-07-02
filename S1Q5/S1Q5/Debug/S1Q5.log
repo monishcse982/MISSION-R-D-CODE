@@ -1,0 +1,16 @@
+﻿Build started 01-Jun-14 12:44:05 AM.
+     1>Project "D:\MISSION R&D\C ONLINE COURSE\S1Q5\S1Q5\S1Q5.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\S1Q5.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt S1Q5.cpp
+         S1Q5.cpp
+     1>d:\mission r&d\c online course\s1q5\s1q5\s1q5.cpp(55): warning C4101: 'loop1' : unreferenced local variable
+     1>d:\mission r&d\c online course\s1q5\s1q5\s1q5.cpp(72): warning C4101: 'return_ptr' : unreferenced local variable
+       Link:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\MISSION R&D\C ONLINE COURSE\S1Q5\Debug\S1Q5.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\MISSION R&D\C ONLINE COURSE\S1Q5\Debug\S1Q5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\MISSION R&D\C ONLINE COURSE\S1Q5\Debug\S1Q5.lib" /MACHINE:X86 Debug\S1Q5.obj
+         Debug\stdafx.obj
+         S1Q5.vcxproj -> D:\MISSION R&D\C ONLINE COURSE\S1Q5\Debug\S1Q5.exe
+     1>Done Building Project "D:\MISSION R&D\C ONLINE COURSE\S1Q5\S1Q5\S1Q5.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.51

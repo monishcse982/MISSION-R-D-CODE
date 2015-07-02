@@ -1,0 +1,15 @@
+﻿Build started 19-Jun-14 1:11:37 PM.
+     1>Project "D:\MISSION R&D\C ONLINE COURSE\DATABSE QUERY\DATABSE QUERY\DATABSE QUERY.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt "DATABSE QUERY.cpp"
+         DATABSE QUERY.cpp
+     1>d:\mission r&d\c online course\databse query\databse query\databse query.cpp(78): warning C4715: 'ASCII_TO_INT' : not all control paths return a value
+       Link:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\MISSION R&D\C ONLINE COURSE\DATABSE QUERY\Debug\DATABSE QUERY.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\MISSION R&D\C ONLINE COURSE\DATABSE QUERY\Debug\DATABSE QUERY.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\MISSION R&D\C ONLINE COURSE\DATABSE QUERY\Debug\DATABSE QUERY.lib" /MACHINE:X86 "Debug\DATABSE QUERY.obj"
+         Debug\stdafx.obj
+         DATABSE QUERY.vcxproj -> D:\MISSION R&D\C ONLINE COURSE\DATABSE QUERY\Debug\DATABSE QUERY.exe
+     1>Done Building Project "D:\MISSION R&D\C ONLINE COURSE\DATABSE QUERY\DATABSE QUERY\DATABSE QUERY.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.55

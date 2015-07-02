@@ -1,0 +1,15 @@
+1. reverse a single linked list using recursion. typically you do with 3 pointers in iteration but you can do this in recursive way as well. 
+2. merge two sorted linked lists using recursion. this problem may sound counter intuitive for recursion but try this
+3. given a string with many words, count the frequncy of the given word using recursion. string length is given to you already
+4. given a sorted double linked list convert that to Binary Search Tree using prev and next as left and right pointers. (find half, first half = tree , 2nd half = tree the mid element = root)
+5. print all permutations from 1 to n numbers.
+
+6. A boy can climb 1 or 2 steps at a time, how many ways can he climb n stairs.
+SOLUTION : recursive call on n-1
+
+
+7. Compute weight of all nodes in a tree.
+8. Tree traversal, visit all nodes of a tree.
+9. sum of elements in an array
+10. find element in an unsorted array.
+11. factorial., fiboncci

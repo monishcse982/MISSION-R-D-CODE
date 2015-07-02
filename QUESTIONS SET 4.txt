@@ -1,0 +1,27 @@
+1. when we want to delete a node, better to be done when we are at previous node as its easy to stitch
+
+2. when you want to add, its not always must that you add only to tail
+
+3. keep only head and dont keep any other references (unless for double list, where you keep head and tail) and nothing else.
+
+4. dont ever change values of nodes, always move nodes using pointers.
+
+1. given a string which has values of integers comma seperated, create a linked list. example "123,34,456,7893,321" output list as: 123->34->456->7893->321
+
+2. Given a sorted linked list as input (remember you have to create this in your program using the test stub and the above program) and a value, write a. add the element to the linked list if it doesnt exist b. delete the element from the linked list if it exists
+
+3. given an unsorted linked list as input, sort the linked list. dont use values to move, use pointers to make it sorted
+
+4. given two sorted linked lists, write a function to merge the two linked lists to one sorted linked list
+
+5. given a sorted linked list in ascending order (supposed to be sorted), one sub-linked list (only one part) is reversed. fix the linked list. example: 1->2->3->5->4->6->7 (supposed to be 1->2->3->4->5->6->7) but 4->5 got reversed, fix it
+
+6. given a single sorted circular linked list (where last element connects to first element and head is at least element of the list), a value, insert the vlaue in the linked list
+
+7. given a single sorted (ascending) linked list, find the median of the linked list
+
+8. given an unsorted linked list, and a value, remove all the nodes that contain value greater than the value given as input
+
+9. given a linked list of the form 1->2->3->4->5 swap two adjacent nodes, output of the example is 2->1->4->3->5
+
+10. given a linked list and value K, keep first K elemetns and remove next K elements, keep again K elements and remove next K elements.

@@ -1,0 +1,14 @@
+﻿Build started 02-Jan-05 12:45:48 AM.
+     1>Project "D:\MISSION R&D\C ONLINE COURSE\3 COLOR SORTING\3 COLOR SORTING\3 COLOR SORTING.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\3 COLOR SORTING.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt "3 COLOR SORTING.cpp"
+         3 COLOR SORTING.cpp
+     1>d:\mission r&d\c online course\3 color sorting\3 color sorting\3 color sorting.cpp(33): warning C4101: 'case_variable' : unreferenced local variable
+     1>d:\mission r&d\c online course\3 color sorting\3 color sorting\3 color sorting.cpp(87): warning C4715: 'three_color_sort' : not all control paths return a value
+       Link:
+         3 COLOR SORTING.vcxproj -> D:\MISSION R&D\C ONLINE COURSE\3 COLOR SORTING\Debug\3 COLOR SORTING.exe
+     1>Done Building Project "D:\MISSION R&D\C ONLINE COURSE\3 COLOR SORTING\3 COLOR SORTING\3 COLOR SORTING.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.15

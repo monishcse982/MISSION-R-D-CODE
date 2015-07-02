@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WATER STAGNATION", "WATER STAGNATION\WATER STAGNATION.vcxproj", "{5AC79869-6A3C-49F4-A15A-86EB75F60C46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5AC79869-6A3C-49F4-A15A-86EB75F60C46}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5AC79869-6A3C-49F4-A15A-86EB75F60C46}.Debug|Win32.Build.0 = Debug|Win32
+		{5AC79869-6A3C-49F4-A15A-86EB75F60C46}.Release|Win32.ActiveCfg = Release|Win32
+		{5AC79869-6A3C-49F4-A15A-86EB75F60C46}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,16 @@
+﻿Build started 12-Jul-14 9:42:16 AM.
+     1>Project "D:\MISSION R&D\C ONLINE COURSE\S5Q5\S5Q5\S5Q5.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\S5Q5.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt S5Q5.cpp
+         S5Q5.cpp
+     1>d:\mission r&d\c online course\s5q5\s5q5\s5q5.cpp(186): warning C4715: 'construct_tree' : not all control paths return a value
+     1>d:\mission r&d\c online course\s5q5\s5q5\s5q5.cpp(257): warning C4715: 'find_node_in_a_tree' : not all control paths return a value
+       Link:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\MISSION R&D\C ONLINE COURSE\S5Q5\Debug\S5Q5.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\MISSION R&D\C ONLINE COURSE\S5Q5\Debug\S5Q5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\MISSION R&D\C ONLINE COURSE\S5Q5\Debug\S5Q5.lib" /MACHINE:X86 Debug\S5Q5.obj
+         Debug\stdafx.obj
+         S5Q5.vcxproj -> D:\MISSION R&D\C ONLINE COURSE\S5Q5\Debug\S5Q5.exe
+     1>Done Building Project "D:\MISSION R&D\C ONLINE COURSE\S5Q5\S5Q5\S5Q5.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.90

@@ -1,0 +1,383 @@
+// inode_filesystem.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include<io.h>
+#include<time.h>
+#include<string.h>
+#include<stdlib.h>
+struct record
+{
+	char filename[16];
+	int start_pos;
+	int size;
+	int creation_time;
+};
+
+FILE *format_disk(int size_bytes,FILE *fp)
+{
+	fseek(fp,size_bytes-1,SEEK_SET);
+	fputc(EOF,fp);
+	rewind(fp);
+	int c;
+	while((c=fgetc(fp))!=EOF)
+	{
+		fputc('0',fp);
+	}
+	rewind(fp);
+	return fp;
+}
+
+int epoch_time()
+{
+	time_t result;
+	result=time(NULL);
+	return (int)result;
+}
+
+int create_new_file(FILE *fp,int index)
+{
+	char buffer[16];
+	struct record *node=(record *)malloc(sizeof(record ));
+	
+	fseek(fp,index*32,SEEK_SET);
+	
+	//filename
+	printf("enter filename\n");
+	scanf("%s",buffer);
+	strcpy(node->filename,buffer);
+	
+	//epoch time
+	node->creation_time=epoch_time();
+	
+	//file position
+	node->start_pos=index;
+	
+	//sizeof file
+	node->size=4096;
+	
+	fwrite(node,sizeof(record),1,fp);
+	return index;
+}
+void writefile(FILE *fp,int index)
+{
+	fseek(fp,index*4096,SEEK_SET);
+	char buffer[4096];
+	int c=0;
+	int i=0;
+	while((c=getchar())==' '||c=='\n');
+	while(c!='\n')
+	{
+		buffer[i]=c;
+		c=getchar();
+		i++;
+	}
+	buffer[i]='\0';
+	fwrite(buffer,sizeof(buffer),1,fp);
+}
+void update(FILE *fp,int index,char *bitvector)
+{
+	fseek(fp,0,SEEK_SET);
+	char files[]="FILES";
+	fwrite(files,sizeof(files),1,fp);
+	printf("%d index here\n",index);
+	fwrite(&index,sizeof(int),1,fp);
+	fwrite(bitvector,strlen(bitvector),1,fp);
+}
+record* search(char *buffer,FILE *fp,int total,char *bitvector)
+{
+	record *node=(record *)malloc(sizeof(record ));
+	for(int i=5;i<=total;i++)
+	{
+		if(bitvector[i]=='1')
+		{
+			fseek(fp,i*32,SEEK_SET);		
+			fread(node,sizeof(struct record),1,fp);//
+			if(strcmp(buffer,node->filename)==0)
+			{
+				return node;
+			}
+		}
+	}
+	return NULL;
+}
+
+void deleteD(FILE *fp,int index,char *bitvector)
+{
+	char buffer2[4096];
+	char buffer[16];
+	printf("enter file to delete\n");
+	scanf("%s",&buffer);
+	record *x=search(buffer,fp,index,bitvector);
+	if(x == NULL)
+		printf("name not found");
+	else
+	{
+			buffer2[0]='\0';
+			buffer[0]='\0';
+	
+			fseek(fp,(x->start_pos)*32,SEEK_SET);//going to the particular record
+			fwrite(buffer,sizeof(buffer),1,fp);
+
+			fseek(fp,(x->start_pos)*4096,SEEK_SET);
+			fwrite(buffer2,sizeof(buffer2),1,fp);
+	}
+}
+
+void file_search(FILE *fp,int index,char *bitvector)
+{
+			char buffer[16];
+			char buffer2[4096];
+			printf("enter the file name to search\n");
+			scanf("%s",buffer);
+			record *x=search(buffer,fp,index,bitvector);
+			if(x == NULL)
+				printf("name not found");
+			else
+			{
+				fseek(fp,(x->start_pos)*4096,SEEK_SET);
+				fread(buffer2,sizeof(buffer2),1,fp);
+				printf("matter: %s\n",buffer2);
+			}
+}
+void file_list(FILE *fp,char *bitvector,int index)
+{
+	record *node=(record *)malloc(sizeof(record));
+	for(int i=5;i<=index;i++)
+	{
+		if(bitvector[i]=='1')
+		{
+			fseek(fp,i*32,SEEK_SET);
+			fread(node,sizeof(record),1,fp);
+			printf(" %s\n",node->filename);
+		}
+	}
+}
+int getindex(char *bitvector)
+{
+	for(int i=5;i<120;i++)
+	{
+		if(bitvector[i] == '0' )
+		{
+			return i;
+		}
+	}
+	return -1;
+}
+int create_new(FILE *fp,int index,char *bitvector)
+{
+	if(index==120)
+	{
+		int temp=getindex(bitvector);
+		if(temp == -1)
+		{
+			printf("not enough space memory\n");
+			return temp;
+		}
+		else
+		{
+			temp=create_new_file(fp,temp);
+			printf("enter data to file\n");
+			writefile(fp,temp);
+			bitvector[temp]='1';
+			update(fp,index,bitvector);
+		}
+	}
+	else
+	{
+		index=create_new_file(fp,index+1);
+		printf("enter data to file\n");
+		writefile(fp,index);
+		printf("index: %d\n",index);
+		bitvector[index]='1';
+	}
+	update(fp,index,bitvector);
+	return index;
+}
+void updateFile(FILE *fp,int index,char *bitvector)
+{
+	char buffer[16];
+	printf("enter the filename to write \n");
+	scanf("%s",buffer);
+	record *x=search(buffer,fp,index,bitvector);
+	if(x == NULL)
+		printf("name not found");
+	else
+	{
+		printf("enter the data to file \n");
+		writefile(fp,x->start_pos);
+	}
+}
+int writefile_put(FILE *fp,int index,char *filename)
+{
+	struct record *node=(record *)malloc(sizeof(record ));
+	
+	fseek(fp,index*32,SEEK_SET);
+	
+	//filename
+	strcpy(node->filename,filename);
+	
+	//epoch time
+	node->creation_time=epoch_time();
+	
+	//file position
+	node->start_pos=index;
+	
+	FILE *newfile=fopen(filename,"rb+");
+	unsigned char buffer[4096];
+	fseek(newfile,0,SEEK_END);
+	int sz=ftell(newfile);
+	rewind(newfile);
+	fread(buffer,sz,1,newfile);
+	
+	//sizeof file
+	printf("sz: %d\n",sz);
+	node->size=sz;
+
+	fwrite(node,sizeof(record),1,fp);
+
+	fseek(fp,index*4096,SEEK_SET);
+	
+	fwrite(buffer,4096,1,fp);
+	fflush(fp);
+	fclose(newfile);
+	return index;
+}
+
+int file_put(FILE *fp,int index,char *bitvector)
+{
+		if(index==120)
+		{
+			int temp=getindex(bitvector);
+			if(temp == -1)
+			{
+				printf("not enough space memory\n");
+				return temp;
+			}
+			else
+			{
+				temp=create_new_file(fp,temp);
+				printf("enter data to file\n");
+				writefile(fp,temp);
+				bitvector[temp]='1';
+				update(fp,index,bitvector);
+			}
+		}
+		else
+		{
+			char buffer[16];
+			printf("enter filename here\n");
+			scanf("%s",buffer);
+			//index=create_new_file_1(fp,index+1,buffer);
+
+			index=writefile_put(fp,index+1,buffer);
+			bitvector[index]='1';
+		}
+		update(fp,index,bitvector);
+		return index;
+}
+int file_dump(FILE *fp,int index,char *bitvector)
+{
+	char buffer[20];
+	printf("enter the file to dump\n");
+	scanf("%s",buffer);
+	record *node=search(buffer,fp,index,bitvector);
+	if(node== NULL)
+	{
+		printf("not found");
+		return index;
+	}
+	fseek(fp,node->start_pos*4096,SEEK_SET);
+	FILE *newfile=fopen(buffer,"wb+");
+	unsigned char buffer2[4096];
+	fread(buffer2,node->size,1,fp);
+	fwrite(buffer2,node->size,1,newfile);
+
+	fflush(newfile);
+	fclose(newfile);
+	return index;
+}
+int inode(FILE *fp,int index,char *bitvector)
+{
+	char buffer[16];
+	record *x;
+	char buffer2[4096];
+	while(1)
+	{
+		printf("1.newfile\n2.filewrite\n3.filelist\n4.search\n5.delete\n6.filecopy\n7.filedump\n8.exit\n");
+		int flag;
+		scanf("%d",&flag);
+		switch(flag)
+		{
+		case 1:
+			index=create_new(fp,index,bitvector);
+			break;
+		case 2:
+			updateFile(fp,index,bitvector);
+			break;
+		case 3:
+			file_list(fp,bitvector,index);
+			break;
+		case 4:
+			file_search(fp,index,bitvector);
+			break;
+		case 5:
+			deleteD(fp,index,bitvector);
+			break;
+		case 6:
+			index=file_put(fp,index,bitvector);
+			break;
+		case 7:
+			index=file_dump(fp,index,bitvector);	
+			break;
+		case 8:
+			return index;
+			break;
+
+		default:
+			break;
+
+		}
+	}
+	return index;
+}
+void initvector(char *bitvector)
+{
+	int i;
+	for(i=0;i<120;i++)
+	{
+		bitvector[i]='0';
+	}
+	bitvector[i]='\0';
+}
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	char file_name[]="hard_drive.bin";
+	char files[]="FILES";
+	FILE *master;
+	int index=4;
+	char bitvector[121];
+	if(_access(file_name,0)!=-1)
+	{
+		master=fopen(file_name,"rb+");
+		fread(files,sizeof(files),1,master);
+		fread(&index,sizeof(int),1,master);
+		fread(bitvector,121,1,master);
+		rewind(master);
+	}
+	else
+	{
+		initvector(bitvector);
+		master=fopen(file_name,"wb+");
+		master=format_disk(1024*1024*8,master);
+		update(master,index,bitvector);
+	}
+
+	index=inode(master,index,bitvector);
+	update(master,index,bitvector);
+
+	getchar();
+	fclose(master);
+	return 0;
+}

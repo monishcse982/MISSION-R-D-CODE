@@ -1,0 +1,37 @@
+GUIDE LINES:
+
+
+1. Dont use global variables
+
+2. main shouldnt have the logic of the program at all. main should call test stub and test stub calls the function. example program i already submitted in the below post
+
+3. write comments in the code
+
+4. dont use i,j,k as names of variables, name them properly
+
+5. if you have multiple solutions to the problem, code them all as different functions. for example if I have to write reverse linked list i will write revlist1(), revlist2() etc
+
+6. your test cases in test stub should cover all cases. that should show your ability to think all cases. the cases shoudl cover all boundary conditions, not just repeat of values 
+
+SET 1 PROGRAMS:
+
+
+1. Given an integer array and length as inputs, write a function to find the max value and min value of the array. example: input array 2, 4, -6, 8, -2 and 5 as inputs, output is: max: 8, min: -6
+
+2. Given an integer array and length as inputs, write a function to remove adjacent duplicate values of the array(same array as return, dont use extra array). examples: input array 1,2,2,5,2,6,6,6,3,2,6,9 output is: 1,2,5,2,6,3,2,6,9
+
+3. given an integer array and length as inputs, write a function to remove all duplicate values in the same array (no second array). input array: 1,2,2,5,2,6,6,6,3,2,6,9, output array: 1,2,5,6,3,9
+
+4. given an integer array and its lengths as inputs, write a function to reverse the array
+
+5. given an unsigned array which has values from 1 to 1000 and length as inputs, write a function to get the Nth (n also as input) top element of the array. example: array input: 21, 3, 44, 6, 13, 5, 51, 23, 1, 18 and N as 3 output is 23
+
+6. given a string (without length) as input, write a function to remove all non alphabets and digits from the same string (string should be passed as call by reference). example: input: "ab$23#44" output "ab2344"
+
+7. given a string (without length) as input, write a function to convert all upper case characters to lower case and lower case characters to upper case. example: GooD as input and output is "gOOd"
+
+8. given a date string as input, in dd/mm/yyyy format, write a function to print the date in english. example: "23/04/2014" output: Twenty third April two thousand fourteen
+
+9. given an integer as input, write a function to convert that to ascii format. example: 1234 number, output : "1234" ascii string
+
+10. given an ascii string as input, write a function to convert that to integer format. example: input "1234" ouptut is 1234 (number)

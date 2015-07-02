@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "COMPARE 4 FIELDS", "COMPARE 4 FIELDS\COMPARE 4 FIELDS.vcxproj", "{F033CADD-BB6C-40F6-BF66-8C68CFE4090F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F033CADD-BB6C-40F6-BF66-8C68CFE4090F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F033CADD-BB6C-40F6-BF66-8C68CFE4090F}.Debug|Win32.Build.0 = Debug|Win32
+		{F033CADD-BB6C-40F6-BF66-8C68CFE4090F}.Release|Win32.ActiveCfg = Release|Win32
+		{F033CADD-BB6C-40F6-BF66-8C68CFE4090F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

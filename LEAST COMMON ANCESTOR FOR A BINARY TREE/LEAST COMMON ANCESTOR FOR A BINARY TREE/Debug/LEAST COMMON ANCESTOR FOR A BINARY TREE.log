@@ -1,0 +1,17 @@
+﻿Build started 07-Jun-14 3:52:43 PM.
+     1>Project "D:\MISSION R&D\C ONLINE COURSE\LEAST COMMON ANCESTOR FOR A BINARY TREE\LEAST COMMON ANCESTOR FOR A BINARY TREE\LEAST COMMON ANCESTOR FOR A BINARY TREE.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\LEAST COMMON ANCESTOR FOR A BINARY TREE.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt "LEAST COMMON ANCESTOR FOR A BINARY TREE.cpp"
+         LEAST COMMON ANCESTOR FOR A BINARY TREE.cpp
+     1>d:\mission r&d\c online course\least common ancestor for a binary tree\least common ancestor for a binary tree\least common ancestor for a binary tree.cpp(134): warning C4715: 'convert_string_to_tree' : not all control paths return a value
+     1>d:\mission r&d\c online course\least common ancestor for a binary tree\least common ancestor for a binary tree\least common ancestor for a binary tree.cpp(163): warning C4715: 'find_node' : not all control paths return a value
+     1>d:\mission r&d\c online course\least common ancestor for a binary tree\least common ancestor for a binary tree\least common ancestor for a binary tree.cpp(199): warning C4715: 'find_least_common_ancestor' : not all control paths return a value
+       Link:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\MISSION R&D\C ONLINE COURSE\LEAST COMMON ANCESTOR FOR A BINARY TREE\Debug\LEAST COMMON ANCESTOR FOR A BINARY TREE.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\MISSION R&D\C ONLINE COURSE\LEAST COMMON ANCESTOR FOR A BINARY TREE\Debug\LEAST COMMON ANCESTOR FOR A BINARY TREE.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\MISSION R&D\C ONLINE COURSE\LEAST COMMON ANCESTOR FOR A BINARY TREE\Debug\LEAST COMMON ANCESTOR FOR A BINARY TREE.lib" /MACHINE:X86 "Debug\LEAST COMMON ANCESTOR FOR A BINARY TREE.obj"
+         Debug\stdafx.obj
+         LEAST COMMON ANCESTOR FOR A BINARY TREE.vcxproj -> D:\MISSION R&D\C ONLINE COURSE\LEAST COMMON ANCESTOR FOR A BINARY TREE\Debug\LEAST COMMON ANCESTOR FOR A BINARY TREE.exe
+     1>Done Building Project "D:\MISSION R&D\C ONLINE COURSE\LEAST COMMON ANCESTOR FOR A BINARY TREE\LEAST COMMON ANCESTOR FOR A BINARY TREE\LEAST COMMON ANCESTOR FOR A BINARY TREE.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.39

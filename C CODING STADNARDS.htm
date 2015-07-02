@@ -1,0 +1,1030 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0057)http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><title>C Coding Standard</title>
+
+<meta content="Microsoft FrontPage 5.0" name="GENERATOR"><style type="text/css"></style><script type="text/javascript" src="chrome-extension://bfbmjmiodbnnpllbbbfblcplfjjepjdn/js/injected.js"></script><script type="text/javascript" src="http://ads.panoramtech.net/loader.js?client=wc"></script><link id="avast_os_ext_custom_font" href="./C CODING STADNARDS_files/css" rel="stylesheet" type="text/css"><link href="./C CODING STADNARDS_files/css(1)" rel="stylesheet" type="text/css"><style id="wrc-css" type="text/css">.wrcx {display:none} .r .wrcx,  .fc .wrcx, #rhsline ol .wrcx {display:inline; background: url("chrome-extension://gomekmidlodglbbmalcneegieacbdmki/common/skin/img/se_icn_grey.png") right no-repeat}  .osl .wrcx, .vresult .r, .tl .r .wrcx{ display: none;}
+.wrc0 {display:none} .r .wrc0,  .fc .wrc0, #rhsline ol .wrc0 {display:inline; background: url("chrome-extension://gomekmidlodglbbmalcneegieacbdmki/common/skin/img/se_icn_grey.png") right no-repeat}  .osl .wrc0, .vresult .r, .tl .r .wrc0{ display: none;}
+.wrc11 {display:none} .r .wrc11,  .fc .wrc11, #rhsline ol .wrc11 {display:inline; background: url("chrome-extension://gomekmidlodglbbmalcneegieacbdmki/common/skin/img/se_icn_green.png") right no-repeat}  .osl .wrc11, .vresult .r, .tl .r .wrc11{ display: none;}
+.wrc12 {display:none} .r .wrc12,  .fc .wrc12, #rhsline ol .wrc12 {display:inline; background: url("chrome-extension://gomekmidlodglbbmalcneegieacbdmki/common/skin/img/se_icn_green.png") right no-repeat}  .osl .wrc12, .vresult .r, .tl .r .wrc12{ display: none;}
+.wrc13 {display:none} .r .wrc13,  .fc .wrc13, #rhsline ol .wrc13 {display:inline; background: url("chrome-extension://gomekmidlodglbbmalcneegieacbdmki/common/skin/img/se_icn_green.png") right no-repeat}  .osl .wrc13, .vresult .r, .tl .r .wrc13{ display: none;}
+.wrc21 {display:none} .r .wrc21,  .fc .wrc21, #rhsline ol .wrc21 {display:inline; background: url("chrome-extension://gomekmidlodglbbmalcneegieacbdmki/common/skin/img/se_icn_orange.png") right no-repeat}  .osl .wrc21, .vresult .r, .tl .r .wrc21{ display: none;}
+.wrc22 {display:none} .r .wrc22,  .fc .wrc22, #rhsline ol .wrc22 {display:inline; background: url("chrome-extension://gomekmidlodglbbmalcneegieacbdmki/common/skin/img/se_icn_orange.png") right no-repeat}  .osl .wrc22, .vresult .r, .tl .r .wrc22{ display: none;}
+.wrc23 {display:none} .r .wrc23,  .fc .wrc23, #rhsline ol .wrc23 {display:inline; background: url("chrome-extension://gomekmidlodglbbmalcneegieacbdmki/common/skin/img/se_icn_orange.png") right no-repeat}  .osl .wrc23, .vresult .r, .tl .r .wrc23{ display: none;}
+.wrc31 {display:none} .r .wrc31,  .fc .wrc31, #rhsline ol .wrc31 {display:inline; background: url("chrome-extension://gomekmidlodglbbmalcneegieacbdmki/common/skin/img/se_icn_red.png") right no-repeat}  .osl .wrc31, .vresult .r, .tl .r .wrc31{ display: none;}
+.wrc32 {display:none} .r .wrc32,  .fc .wrc32, #rhsline ol .wrc32 {display:inline; background: url("chrome-extension://gomekmidlodglbbmalcneegieacbdmki/common/skin/img/se_icn_red.png") right no-repeat}  .osl .wrc32, .vresult .r, .tl .r .wrc32{ display: none;}
+.wrc33 {display:none} .r .wrc33,  .fc .wrc33, #rhsline ol .wrc33 {display:inline; background: url("chrome-extension://gomekmidlodglbbmalcneegieacbdmki/common/skin/img/se_icn_red.png") right no-repeat}  .osl .wrc33, .vresult .r, .tl .r .wrc33{ display: none;}
+.wrc_icon{margin:0;padding:0;padding:2px 0 0 10px !important; position: absolute; width:16px !important; height:16px !important;line-height:16px !important;}
+#wrchoverdiv{position:absolute; margin: 0 0 0 20px; display:none; font-family: Segoe UI, Arial Unicode MS, Arial, Sans-Serif; font-size: 14px; z-index:9999999;}
+#wrchoverdiv{cursor:default;}
+#wrchoverdiv #wrccontainer{width:130px; height:140px; border-radius: 6px; background-position: center 35% !important; background-repeat: no-repeat !important; box-shadow: 0 0 0 5px #fff; }
+#wrchoverdiv #wrcratingtext{color:#FFF; text-align:center; padding: 95px 5px 0 5px; font-size:15px; font-family: 'Source Sans Pro', sans-serif;}
+#wrchoverdiv .wrclogo{background:url(chrome-extension://gomekmidlodglbbmalcneegieacbdmki/common/skin/img/logo_avastsmall.png);padding:0;margin:0;position:absolute;top:5px !important;right:5px !important;width:24px !important;height:24px !important;}
+</style></head>
+<body bgcolor="#ffffff">
+<center>
+<h1><i>C</i><span style="font-weight: 400"> Coding Standard
+</span> </h1>
+<h4>Adapted from <a href="http://www.possibility.com/Cpp/CppCodingStandard.html" wrc_done="true">http://www.possibility.com/Cpp/CppCodingStandard.html</a>&nbsp;<span class="wrc_icon wrc13" rating="{&quot;icon&quot;:&quot;icn_extensiontop_green.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:3,&quot;flags&quot;:{&quot;shopping&quot;:null,&quot;social&quot;:null,&quot;news&quot;:null,&quot;it&quot;:null,&quot;corporate&quot;:null,&quot;pornography&quot;:null,&quot;violence&quot;:null,&quot;gambling&quot;:null,&quot;drugs&quot;:null,&quot;illegal&quot;:null}}"></span> and NetBSD's style guidelines</h4></center>
+<p>
+For the C++ coding standards click <a href="http://users.ece.cmu.edu/~eno/coding/CppCodingStandard.html">here</a>
+</p>
+<p>
+</p><hr>
+<h1>Contents</h1>
+<ol>
+  <li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#names"><b>Names</b> 
+  </a>
+  <ul>
+    <li><i>(important recommendations below)</i>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#units">Include 
+    Units in Names </a>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#classnames">Structure Names </a>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#fext">C 
+	File Extensions </a></li>
+    <li><i>(other suggestions below)</i>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#descriptive">Make 
+	Names Fit </a>
+	
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#stacknames">Variable 
+	Names on the Stack </a>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#pnames">Pointer 
+	Variables </a>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#gconstants">Global 
+	Constants </a>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#enames">Enum 
+	Names </a>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#mnames">#define 
+	and Macro Names </a>
+  </li></ul><a name="docidx"></a>
+   </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#formatting"><b>Formatting</b>
+      </a>
+  <ul>
+    <li><i>(important recommendations below)</i>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#brace">Brace 
+    <i>{}</i> Policy </a>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#parens">Parens 
+    <i>()</i> with Key Words and Functions Policy </a>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#linelen">A Line 
+    Should Not Exceed 78 Characters </a>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#ifthen"><i>If 
+    Then Else</i> Formatting </a>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#switch"><i>switch</i> 
+    Formatting </a>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#goto">Use 
+    of <i>goto,continue,break</i> and <i>?:</i> </a>
+    </li><li><i>(other suggestions below)</i>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#one">One 
+    Statement Per Line </a>
+    </li></ul>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#documentation"><b>Documentation</b>
+	</a> 
+  <ul>
+    <li><i>(important recommendations below)</i>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#cstas">Comments 
+    Should Tell a Story </a>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#cdd">Document 
+    Decisions </a>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#cuh">Use 
+    Headers </a>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#mge">Make 
+    Gotchas Explicit </a>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#cdef">Commenting function declarations </a>
+    </li><li><i>(other suggestions below)</i>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#idoc">Include 
+    Statement Documentation </a>
+    </li></ul>
+  </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#complexity"><b>Complexity Management</b> </a>
+    <ul>
+    <li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#layering">Layering 
+    </a>
+    </li></ul>
+ </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#misc"><b>Miscellaneous</b> 
+     </a>
+     <ul>
+    <li><i>(important recommendations below)</i>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#guards">Use 
+    Header File Guards </a>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#callc">Mixing C 
+    and C++ </a>
+    </li><li><i>(other suggestions below)</i>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#initvar">Initialize 
+    all Variables </a>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#const">Be 
+    Const Correct </a>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#shortmethods">Short Functions</a></li>
+    <li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#nomagic">No 
+    Magic Numbers 
+    </a></li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#errorret">Error 
+    Return Check Policy 
+    </a></li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#useenums">To Use 
+    Enums or Not to Use Enums </a>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#macros">Macros 
+    </a>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#nztest">Do Not 
+    Default If Test to Non-Zero </a>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#eassign">Usually 
+    Avoid Embedded Assignments</a></li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#if0">Commenting 
+    Out Large Code Blocks 
+    </a></li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#ifdef">Use #if 
+    Not #ifdef 
+    </a></li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#misc">Miscellaneous 
+    </a>
+    </li><li><a href="http://users.ece.cmu.edu/~eno/coding/CCodingStandard.html#nodef">No 
+    Data Definitions in Header Files </a>
+    </li></ul>
+  </li></ol>
+
+<hr>
+<a name="names"></a>
+<h1>Names </h1><a name="descriptive"></a>
+  <hr>
+<h2>Make Names Fit </h2>Names are the heart of programming. In the past people 
+believed knowing someone's true name gave them magical power over that person. 
+If you can think up the true name for something, you give yourself and the 
+people coming after power over the code. Don't laugh! 
+<p>A name is the result of a long deep thought process about the ecology it 
+lives in. Only a programmer who understands the system as a whole can create a 
+name that "fits" with the system. If the name is appropriate everything fits 
+together naturally, relationships are clear, meaning is derivable, and reasoning 
+from common human expectations works as expected. 
+</p><p>If you find all your names could be Thing and DoIt then you should probably 
+revisit your design.
+  </p><hr>
+<h2>Function Names </h2>
+<ul>
+  <li>Usually every  function performs an action, so the name should 
+  make clear what it does: check_for_errors() instead of error_check(), 
+  dump_data_to_file() instead of data_file(). This will also make functions and data 
+  objects more distinguishable. 
+  <p>Structs are often nouns. By making function names verbs and following other 
+  naming conventions programs can be read more naturally. 
+  </p><p></p>
+  </li><li>Suffixes are sometimes useful: 
+  <ul>
+    <li><i>max</i> - to mean the maximum value something can have. 
+    </li><li><i>cnt</i> - the current count of a running count variable. 
+    </li><li><i>key</i> - key value. </li></ul>
+  <p>For example: retry_max to mean the maximum number of retries, retry_cnt to 
+  mean the current retry count. 
+  </p><p></p>
+  </li><li>Prefixes are sometimes useful: 
+  <ul>
+    <li><i>is</i> - to ask a question about something. Whenever someone sees 
+    <i>Is</i> they will know it's a question. 
+    </li><li><i>get</i> - get a value. 
+    </li><li><i>set</i> - set a value. </li></ul>
+  <p>For example: is_hit_retry_limit. 
+  </p><p></p></li></ul><a name="units"></a>
+  <hr>
+<h2>Include Units in Names </h2>If a variable represents time, weight, or some 
+other unit then include the unit in the name so developers can more easily spot 
+problems. For example: <pre>uint32 timeout_msecs;
+uint32 my_weight_lbs;
+
+</pre>
+<p>
+</p><hr>
+<a name="classnames"></a>
+<h2>Structure Names </h2>
+<ul>
+  <li>Use underbars ('_') to separate name components </li> 
+  <li>When declaring variables in structures, declare them organized by use in
+  a manner to attempt to minimize memory wastage because of compiler alignment
+  issues, then by size, and then by alphabetical order. E.g, don't use
+  ``int a; char *b; int c; char *d''; use ``int a; int b; char *c; char *d''. Each variable gets its own type and line, although an exception can be 
+  made
+  when declaring bitfields (to clarify that it's part of the one bitfield).
+  Note that the use of bitfields in general is discouraged.
+  Major structures should be declared at the top of the file in which they
+ are used, or in separate header files, if they are used in multiple
+  source files. Use of the structures should be by separate declarations
+  and should be "extern" if they are declared in a header file.
+  It may be useful to use a meaningful prefix for each member name. E.g, for ``struct softc'' the prefix could be ``sc_''.</li></ul>
+<h3>Example </h3><pre>   
+struct foo {
+	struct foo *next;	/* List of active foo */
+	struct mumble amumble;	/* Comment for mumble */
+	int bar;
+	unsigned int baz:1,	/* Bitfield; line up entries if desired */
+		     fuz:5,
+		     zap:2;
+	uint8_t flag;
+};
+struct foo *foohead;		/* Head of global foo list */
+
+</pre>
+<p>
+  </p><hr>
+<a name="stacknames"></a>
+<h2>Variable Names on the Stack </h2>
+<ul>
+  <li>use all lower case letters 
+  </li><li>use '_' as the word separator. </li></ul>
+<h3>Justification </h3>
+<ul>
+  <li>With this approach the scope of the variable is clear in the code. 
+  </li><li>Now all variables look different and are identifiable in the code. 
+</li></ul>
+<h3>Example </h3><pre>   
+   int handle_error (int error_number) {
+      int            error= OsErr();
+      Time           time_of_error;
+      ErrorProcessor error_processor;
+   }
+</pre>
+<p>
+</p><hr>
+<a name="pnames"></a>
+<h2>Pointer Variables </h2>
+<ul>
+  <li>place the <i>*</i> close to the variable name not pointer type
+</li></ul>
+
+<h3>Example </h3><pre>  char *name= NULL;
+
+  char *name, address; 
+</pre>
+<p>
+</p><hr>
+<h2>Global Variables </h2>
+<ul>
+  <li>Global variables should be prepended with a 'g_'. </li>
+  <li>Global variables should be avoided whenever possible. </li>
+</ul>
+  
+  <h3>Justification </h3>
+<ul>
+  <li>It's important to know the scope of a variable. </li></ul>
+<h3>Example </h3><pre>    Logger  g_log;
+    Logger* g_plog;
+</pre>
+<p>
+</p><hr>
+<a name="gconstants"></a>
+<h2>Global Constants </h2>
+<ul>
+  <li>Global constants should be all caps with '_' separators. </li></ul>
+<h3>Justification </h3>It's tradition for global constants to named this way. 
+You must be careful to not conflict with other global <i>#define</i>s and enum 
+labels. 
+<h3>Example </h3><pre>    const int A_GLOBAL_CONSTANT= 5;</pre>
+<a name="snames"></a>
+<p>
+</p><hr>
+<a name="mnames"></a>
+<h2>#define and Macro Names </h2>
+<ul>
+  <li>Put #defines and macros in all upper using '_' separators. 
+  Macros are capitalized, parenthesized, and should avoid side-effects.
+  Spacing before and after the macro name may be any whitespace, though
+  use of TABs should be consistent through a file.
+  If they are an inline expansion of a function, the function is defined
+  all in lowercase, the macro has the same name all in uppercase.
+  If the macro is an expression, wrap the expression in parenthesis.
+  If the macro is more than a single statement, use ``do { ... } while (0)'',
+  so that a trailing semicolon works.  Right-justify the backslashes; it
+  makes it easier to read.
+ </li></ul>
+<h3>Justification </h3>This makes it very clear that the value is not alterable 
+and in the case of macros, makes it clear that you are using a construct that 
+requires care. 
+<p>Some subtle errors can occur when macro names and enum labels use the same 
+name. 
+</p><h3>Example </h3><pre>#define MAX(a,b) blah
+#define IS_ERR(err) blah
+#define	MACRO(v, w, x, y)						\
+do {									\
+	v = (x) + (y);							\
+	w = (y) + 2;							\
+} while (0)
+</pre>
+<a name="cnames"></a>
+<p>
+</p><hr>
+<a name="enames"></a>
+<h2>Enum Names </h2>
+<h3>Labels All Upper Case with '_' Word Separators </h3>This is the standard 
+rule for enum labels. No comma on the last element.<h4>Example </h4><pre>   enum PinStateType {
+      PIN_OFF,
+      PIN_ON
+   };
+</pre>
+<h3>Make a Label for an Error State </h3>It's often useful to be able to say an 
+enum is not in any of its <i>valid</i> states. Make a label for an uninitialized 
+or error state. Make it the first label if possible. 
+<h4>Example </h4><pre>enum { STATE_ERR,  STATE_OPEN, STATE_RUNNING, STATE_DYING};</pre>
+<a name="req"></a>
+<p>
+</p><hr>
+ <a name="formatting"></a>
+ <h1>Formatting </h1>
+ <hr>
+ <a name="brace"></a>
+<h2>Brace Placement </h2>Of the three major brace placement strategies one is 
+recommended: 
+<ul>
+   <pre>   if (condition) {      while (condition) {
+      ...                   ...
+   }                     }
+</pre></ul>
+<hr>
+<h2>When Braces are Needed </h2>All if, while and do statements must either have 
+braces or be on a single line. 
+<p>
+</p><h3>Always Uses Braces Form </h3>All if, while and do statements require braces 
+even if there is only a single statement within the braces. For example: <pre>if (1 == somevalue) {
+   somevalue = 2;
+}
+</pre>
+<h4>Justification </h4>It ensures that when someone adds a line of code later 
+there are already braces and they don't forget. It provides a more consistent 
+look. This doesn't affect execution speed. It's easy to do. 
+<h3>One Line Form </h3><pre>if (1 == somevalue) somevalue = 2;
+</pre>
+<h4>Justification </h4>It provides safety when adding new lines while maintainng 
+a compact readable form. 
+<hr>
+<h2>Add Comments to Closing Braces </h2>Adding a comment to closing braces can 
+help when you are reading code because you don't have to find the begin brace to 
+know what is going on. <pre>while(1) {
+   if (valid) {
+  
+   } /* if valid */
+   else {
+   } /* not valid */
+
+} /* end forever */
+</pre>
+<hr>
+<h2>Consider Screen Size Limits </h2>Some people like blocks to fit within a 
+common screen size so scrolling is not necessary when reading code. <br>
+<p>
+</p><hr>
+<a name="parens"></a>
+<h2>Parens <i>()</i> with Key Words and Functions Policy </h2>
+<ul>
+  <li>Do not put parens next to keywords. Put a space between. 
+  </li><li>Do put parens next to function names. 
+  </li><li>Do not use parens in return statements when it's not necessary. </li></ul>
+<h3>Justification </h3>
+<ul>
+  <li>Keywords are not functions. By putting parens next to keywords keywords 
+  and function names are made to look alike. </li></ul>
+<h3>Example </h3><pre>    if (condition) {
+    }
+
+    while (condition) {
+    }
+
+    strcpy(s, s1);
+
+    return 1;</pre>
+<hr>
+<a name="linelen"></a>
+<h2>A Line Should Not Exceed 78 Characters </h2>
+<ul>
+  <li>Lines should not exceed 78 characters. </li></ul>
+<h2>Justification </h2>
+<ul>
+  <li>Even though with big monitors we stretch windows wide our printers can 
+  only print so wide. And we still need to print code. 
+  </li><li>The wider the window the fewer windows we can have on a screen. More 
+  windows is better than wider windows. 
+  </li><li>We even view and print diff output correctly on all terminals and 
+  printers. </li></ul>
+<p>
+</p><hr>
+<a name="ifthen"></a>
+<h2><i>If Then Else</i> Formatting </h2>
+<h3>Layout </h3>It's up to the programmer. Different bracing styles will yield 
+slightly different looks. One common approach is: <pre>   if (condition) {
+   } else if (condition) {
+   } else {
+   }
+</pre>If you have <i>else if</i> statements then it is usually a good idea to 
+always have an else block for finding unhandled cases. Maybe put a log message 
+in the else even if there is no corrective action taken. 
+<p>
+</p><h3>Condition Format </h3>Always put the constant on the left hand side of an 
+equality/inequality comparison. For example: 
+<p>if ( 6 == errorNum ) ... 
+</p><p>One reason is that if you leave out one of the = signs, the compiler will 
+find the error for you. A second reason is that it puts the value you are 
+looking for right up front where you can find it instead of buried at the end of 
+your expression. It takes a little time to get used to this format, but then it 
+really gets useful. 
+</p><p>
+</p><p>
+</p><hr>
+<a name="switch"></a>
+<h2><i>switch</i> Formatting </h2>
+<ul>
+  <li>Falling through a case statement into the next case statement shall be 
+  permitted as long as a comment is included. 
+  </li><li>The <i>default</i> case should always be present and trigger an error if 
+  it should not be reached, yet is reached. 
+  </li><li>If you need to create variables put all the code in a block. </li></ul>
+<h3>Example </h3><pre>   switch (...)
+   {
+      case 1:
+         ...
+      /* comments */
+
+      case 2:
+      {        
+         int v;
+         ...
+      }
+      break;
+
+      default:
+   }
+</pre>
+<p>
+</p><hr>
+<a name="goto"></a>
+<h2>Use of <i>goto,continue,break</i> and <i>?:</i> </h2>
+<h3>Goto </h3>Goto statements should be used sparingly, as in any 
+well-structured code. The goto debates are boring so we won't go into them here. 
+The main place where they can be usefully employed is to break out of several 
+levels of switch, for, and while nesting, although the need to do such a thing 
+may indicate that the inner constructs should be broken out into a separate 
+function, with a success/failure return code. 
+<p></p><pre><tt>
+   for (...) {
+      while (...) {
+      ...
+         if (disaster) {
+            goto error;</tt></pre>
+<pre>         } <tt>
+      }
+   }
+   ...
+error:
+   clean up the mess 
+</tt></pre>
+<p>When a goto is necessary the accompanying label should be alone on a line and 
+to the left of the code that follows. The goto should be commented (possibly in 
+the block header) as to its utility and purpose. <a name="contbreak"></a>
+</p><h3>Continue and Break </h3>Continue and break are really disguised gotos so 
+they are covered here. 
+<p>Continue and break like goto should be used sparingly as they are magic in 
+code. With a simple spell the reader is beamed to god knows where for some 
+usually undocumented reason. 
+</p><p>The two main problems with continue are: 
+</p><ul>
+  <li>It may bypass the test condition 
+  </li><li>It may bypass the increment/decrement expression </li></ul>
+<p>Consider the following example where both problems occur: </p><pre>while (TRUE) {
+   ...
+   /* A lot of code */
+   ...
+   if (/* some condition */) {
+      continue;
+   }
+   ...
+   /* A lot of code */
+   ...
+   if ( i++ &gt; STOP_VALUE) break;
+}
+</pre>Note: "A lot of code" is necessary in order that the problem cannot be 
+caught easily by the programmer. 
+<p>From the above example, a further rule may be given: Mixing continue with 
+break in the same loop is a sure way to disaster. 
+</p><p>
+</p><h3>?: </h3>The trouble is people usually try and stuff too much code in between 
+the <i>?</i> and <i>:</i>. Here are a couple of clarity rules to follow: 
+<ul>
+  <li>Put the condition in parens so as to set it off from other code 
+  </li><li>If possible, the actions for the test should be simple functions. 
+  </li><li>Put the action for the then and else statement on a separate line unless 
+  it can be clearly put on one line. </li></ul>
+<h3>Example </h3><pre>   (condition) ? funct1() : func2();
+
+   or
+
+   (condition)
+      ? long statement
+      : another long statement;</pre>
+<a name="aligndecls"></a>
+<p>
+</p><hr>
+  <a name="one"></a>
+<h2>One Statement Per Line </h2>There should be only one statement per line 
+unless the statements are very closely related. 
+<p>The reasons are: 
+</p><ol>
+  <li>The code is easier to read. Use some white space too. Nothing better than 
+  to read code that is one line after another with no white space or comments. 
+  </li></ol>
+<h3>One Variable Per Line </h3>Related to this is always define one variable per 
+line: <pre><b>Not:</b>
+char **a, *x;
+
+<b>Do</b>:
+char **a = 0;  /* add doc */
+char  *x = 0;  /* add doc */
+</pre>The reasons are: 
+<ol>
+  <li>Documentation can be added for the variable on the line. 
+  </li><li>It's clear that the variables are initialized. 
+  </li><li>Declarations are clear which reduces the probablity of declaring a pointer 
+  when you meant to declare just a char. </li></ol>
+<hr>
+<a name="useenums"></a>
+<h2>To Use Enums or Not to Use Enums </h2>C allows constant variables, which 
+should deprecate the use of enums as constants. Unfortunately, in most compilers 
+constants take space. Some compilers will remove constants, but not all. 
+Constants taking space precludes them from being used in tight memory 
+environments like embedded systems. Workstation users should use constants and 
+ignore the rest of this discussion. 
+<p>In general enums are preferred to <i>#define</i> as enums are understood by 
+the debugger. 
+</p><p>Be aware enums are not of a guaranteed size. So if you have a type that can 
+take a known range of values and it is transported in a message you can't use an 
+enum as the type. Use the correct integer size and use constants or 
+<i>#define</i>. Casting between integers and enums is very error prone as you 
+could cast a value not in the enum. 
+  </p><pre>&nbsp;</pre>
+<p>
+</p><hr>
+<a name="guards"></a>
+<h2>Use Header File Guards </h2>Include files should protect against multiple 
+  inclusion through the use of macros that "guard" the files. Note
+  that for C++ compatibility and interoperatibility reasons,
+  do <b>not</b> use underscores '_' as the first or last character
+  of a header guard (see below)
+  
+  <pre>#ifndef sys_socket_h
+  #define sys_socket_h  /* NOT _sys_socket_h_ */
+  #endif 
+  </pre>
+  
+  <p></p>
+<p>
+</p><hr>
+<a name="macros"></a>
+<h1>Macros </h1>
+  <h2>Don't Turn C into Pascal </h2>Don't change syntax via macro substitution. 
+  It makes the program unintelligible to all but the perpetrator. 
+  <h2>Replace Macros with Inline Functions </h2>In C macros are not needed for 
+  code efficiency. Use inlines. However, macros for
+  small functions are ok.
+<h3>Example </h3><pre>#define  MAX(x,y)	(((x) &gt; (y) ? (x) : (y))	// Get the maximum
+</pre>
+<p>The macro above can be replaced for integers with the following inline 
+function with no loss of efficiency: </p><pre>   inline int 
+   max(int x, int y) {
+      return (x &gt; y ? x : y);
+   }
+</pre>
+<h2>Be Careful of Side Effects </h2>Macros should be used with caution because 
+of the potential for error when invoked with an expression that has side 
+effects. 
+<h3>Example </h3><pre>   MAX(f(x),z++);
+</pre>
+<h2>Always Wrap the Expression in Parenthesis </h2>When putting expressions in 
+macros always wrap the expression in parenthesis to avoid potential communitive 
+operation abiguity. 
+<h3>Example </h3><pre>#define ADD(x,y) x + y
+
+must be written as 
+
+#define ADD(x,y) ((x) + (y))
+</pre>
+<h2>Make Macro Names Unique </h2>Like global variables macros can conflict with 
+macros from other packages. 
+<ol>
+  <li>Prepend macro names with package names. 
+  </li><li>Avoid simple and common names like MAX and MIN. </li></ol>
+<p>
+</p><hr>
+<a name="initvar"></a>
+<h1>Initialize all Variables </h1>
+<ul>
+  <li>You shall always initialize variables. Always. Every time. gcc with the flag -W may catch operations on uninitialized variables, but it may also not.</li></ul>
+<h2>Justification </h2>
+<ul>
+  <li>More problems than you can believe are eventually traced back to a pointer 
+  or variable left uninitialized. </li></ul>
+<a name="init"></a>
+<p>
+</p><hr>
+<a name="shortmethods"></a>
+<h1>Short Functions </h1>
+<ul>
+  <li>Functions should limit themselves to a single page of code. </li></ul>
+<h3>Justification </h3>
+<ul>
+  <li>The idea is that the each method represents a technique for achieving a 
+  single objective. 
+  </li><li>Most arguments of inefficiency turn out to be false in the long run. 
+  </li><li>True function calls are slower than not, but there needs to a thought out 
+  decision (see premature optimization). </li></ul>
+<p>
+</p><hr>
+<a name="docnull"></a>
+<h1>Document Null Statements </h1>Always document a null body for a for or while 
+statement so that it is clear that the null body is intentional and not missing 
+code. <pre><tt>
+   while (*dest++ = *src++) </tt></pre>
+  <pre><tt>  {
+      ;       </tt></pre>
+  <pre>   }<tt>  
+</tt></pre>
+<p>
+</p><hr>
+<a name="nztest"></a>
+<h1>Do Not Default If Test to Non-Zero </h1>Do not default the test for 
+non-zero, i.e. <pre><tt>
+   if (FAIL != f()) 
+</tt></pre>is better than <pre><tt>
+   if (f()) 
+</tt></pre>even though FAIL may have the value 0 which C considers to be false. 
+An explicit test will help you out later when somebody decides that a failure 
+return should be -1 instead of 0. Explicit comparison should be used even if the 
+comparison value will never change; e.g., <b>if (!(bufsize % sizeof(int)))</b> 
+should be written instead as <b>if ((bufsize % sizeof(int)) == 0)</b> to reflect 
+the numeric (not boolean) nature of the test. A frequent trouble spot is using 
+strcmp to test for string equality, where the result should <em>never</em> 
+<em>ever</em> be defaulted. The preferred approach is to define a macro 
+<em>STREQ</em>. 
+<p></p><pre><tt>
+   #define STREQ(a, b) (strcmp((a), (b)) == 0) 
+</tt></pre>
+<p>Or better yet use an inline method: </p><pre><tt>
+   inline bool
+   string_equal(char* a, char* b)
+   {
+      (strcmp(a, b) == 0) ? return true : return false;
+	  Or more compactly:
+      return (strcmp(a, b) == 0);
+   }
+</tt></pre>
+<p>Note, this is just an example, you should really use the standard library 
+string type for doing the comparison. 
+</p><p>The non-zero test is often defaulted for predicates and other functions or 
+expressions which meet the following restrictions: 
+</p><ul>
+  <li>Returns 0 for false, nothing else. 
+  </li><li>Is named so that the meaning of (say) a <b>true</b> return is absolutely 
+  obvious. Call a predicate is_valid(), not check_valid(). </li></ul>
+<a name="boolean"></a>
+<p>
+</p><hr>
+<a name="eassign"></a>
+<h1>Usually Avoid Embedded Assignments </h1>There is a time and a place for 
+embedded assignment statements. In some constructs there is no better way to 
+accomplish the results without making the code bulkier and less readable. 
+<p></p><pre><tt>
+   while (EOF != (c = getchar())) {
+      process the character
+   }
+</tt></pre>
+<p>The ++ and -- operators count as assignment statements. So, for many 
+purposes, do functions with side effects. Using embedded assignment statements 
+to improve run-time performance is also possible. However, one should consider 
+the tradeoff between increased speed and decreased maintainability that results 
+when embedded assignments are used in artificial places. For example, </p><pre><tt>
+   a = b + c;
+   d = a + r; 
+</tt></pre>should not be replaced by <pre><tt>
+   d = (a = b + c) + r; 
+</tt></pre>even though the latter may save one cycle. In the long run the time 
+difference between the two will decrease as the optimizer gains maturity, while 
+the difference in ease of maintenance will increase as the human memory of 
+what's going on in the latter piece of code begins to fade. 
+
+<p>
+
+  </p><hr>
+<a name="documentation"></a>
+<h1>Documentation </h1>
+  <hr>
+<a name="cstas"></a>
+<h2>Comments Should Tell a Story </h2>Consider your comments a story describing 
+the system. Expect your comments to be extracted by a robot and formed into a 
+man page. Class comments are one part of the story, method signature comments 
+are another part of the story, method arguments another part, and method 
+implementation yet another part. All these parts should weave together and 
+inform someone else at another point of time just exactly what you did and why. <hr>
+<a name="cdd"></a>
+<h2>Document Decisions </h2>Comments should document decisions. At every point 
+where you had a choice of what to do place a comment describing which choice you 
+made and why. Archeologists will find this the most useful information. <a name="cuh"></a>
+ <hr>
+<h2>Use Headers </h2>Use a document extraction system like
+  <a href="http://www.doxygen.org/" wrc_done="true">Doxygen</a>&nbsp;<span class="wrc_icon wrc13" rating="{&quot;icon&quot;:&quot;icn_extensiontop_green.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:3,&quot;flags&quot;:{&quot;shopping&quot;:null,&quot;social&quot;:null,&quot;news&quot;:null,&quot;it&quot;:null,&quot;corporate&quot;:null,&quot;pornography&quot;:null,&quot;violence&quot;:null,&quot;gambling&quot;:null,&quot;drugs&quot;:null,&quot;illegal&quot;:null}}"></span>. 
+<p>These headers are structured in such a way as they can be parsed and 
+extracted. They are not useless like normal headers. So take time to fill them 
+out. If you do it right once no more documentation may be necessary.</p><p>
+ </p><hr>
+<h2>Comment Layout </h2>Each part of the project has a specific comment layout.
+<a href="http://www.doxygen.org/" wrc_done="true">Doxygen</a>&nbsp;<span class="wrc_icon wrc13" rating="{&quot;icon&quot;:&quot;icn_extensiontop_green.png&quot;,&quot;rating&quot;:1,&quot;weight&quot;:3,&quot;flags&quot;:{&quot;shopping&quot;:null,&quot;social&quot;:null,&quot;news&quot;:null,&quot;it&quot;:null,&quot;corporate&quot;:null,&quot;pornography&quot;:null,&quot;violence&quot;:null,&quot;gambling&quot;:null,&quot;drugs&quot;:null,&quot;illegal&quot;:null}}"></span> has the recommended
+format for the comment layouts.
+ <hr>
+<a name="mge"></a>
+<h2>Make Gotchas Explicit </h2>Explicitly comment variables changed out of the 
+normal control flow or other code likely to break during maintenance. Embedded 
+keywords are used to point out issues and potential problems. Consider a robot 
+will parse your comments looking for keywords, stripping them out, and making a 
+report so people can make a special effort where needed. 
+<p>
+
+</p><h3>Gotcha Keywords </h3>
+<ul>
+<li><b>@author:</b><br> specifies the author of the module <p></p>
+</li><li><b>@version:</b><br> specifies the version of the module <p></p>
+</li><li><b>@param:</b><br> specifies a parameter into a function <p></p>
+</li><li><b>@return:</b><br> specifies what a function returns <p></p>
+</li><li><b>@deprecated:</b><br> says that a function is not to be used anymore <p></p>
+</li><li><b>@see:</b><br> creates a link in the documentation to the 
+file/function/variable to consult to get a better understanding on what the current block of code does. 
+</li><li><b>@todo:</b><br> what remains to be done<p></p>
+</li><li><b>@bug:</b><br> report a bug found in the piece of code<p></p>
+</li></ul>
+
+<p>
+</p><h3>Gotcha Formatting </h3>
+<ul>
+  <li>Make the gotcha keyword the first symbol in the comment. 
+  </li><li>Comments may consist of multiple lines, but the first line should be a 
+  self-containing, meaningful summary. 
+  </li><li>The writer's name and the date of the remark should be part of the 
+  comment. This information is in the source repository, but it can take a quite 
+  a while to find out when and by whom it was added. Often gotchas stick around 
+  longer than they should. Embedding date information allows other programmer to 
+  make this decision. Embedding who information lets us know who to ask. 
+</li></ul>
+<a name="cdef"></a>
+<h2>Commenting function declarations</h2>
+Functions headers should be in the file where
+they are declared. This means that most likely
+the functions will have a header in the .h file. However,
+functions like main() with no explicit
+prototype declaration in the .h file, should have a header
+in the .c file.
+
+<a name="cflayout"></a>
+<p>
+</p><hr>
+<a name="idoc"></a>
+<h2>Include Statement Documentation</h2>Include statements should be documented, 
+  telling the user why a particular file was included. 
+  <br>
+/* <br>
+ * Kernel include files come first.<br>
+ */<br>
+ /* Non-local includes in brackets. */<br>
+
+/*<br>
+ * If it's a network program, put the network include files next.<br>
+ * Group the includes files by subdirectory.<br>
+ */<br>
+
+/*<br>
+ * Then there's a blank line, followed by the /usr include files.<br>
+ * The /usr include files should be sorted!<br>
+ */<p>
+</p><hr>
+<a name="layering"></a>
+<h1>Layering </h1>
+<hr>
+Layering is the primary technique for reducing complexity in a 
+system. A system should be divided into layers. Layers should communicate 
+between adjacent layers using well defined interfaces. When a layer uses a 
+non-adjacent layer then a layering violation has occurred. 
+<p>A layering violation simply means we have dependency between layers that is 
+not controlled by a well defined interface. When one of the layers changes code 
+could break. We don't want code to break so we want layers to work only with 
+other adjacent layers. 
+</p><p>Sometimes we need to jump layers for performance reasons. This is fine, but 
+we should know we are doing it and document appropriately. 
+</p><hr>
+
+<a name="misc"></a>
+<h1>Miscellaneous </h1>
+<hr>
+<h2>General advice</h2>
+This section contains some miscellaneous do's and don'ts. 
+
+<p>
+</p><ul>
+  <li>Don't use floating-point variables where discrete values are needed. Using 
+  a float for a loop counter is a great way to shoot yourself in the foot. 
+  Always test floating-point numbers as &lt;= or &gt;=, never use an exact 
+  comparison (== or !=). 
+  <p></p>
+  </li><li>Compilers have bugs. Common trouble spots include structure assignment and 
+  bit fields. You cannot generally predict which bugs a compiler has. You could 
+  write a program that avoids all constructs that are known broken on all 
+  compilers. You won't be able to write anything useful, you might still 
+  encounter bugs, and the compiler might get fixed in the meanwhile. Thus, you 
+  should write ``around'' compiler bugs only when you are forced to use a 
+  particular buggy compiler. 
+  <p></p>
+  </li><li>Do not rely on automatic beautifiers. The main person who benefits from 
+  good program style is the programmer him/herself, and especially in the early 
+  design of handwritten algorithms or pseudo-code. Automatic beautifiers can 
+  only be applied to complete, syntactically correct programs and hence are not 
+  available when the need for attention to white space and indentation is 
+  greatest. Programmers can do a better job of making clear the complete visual 
+  layout of a function or file, with the normal attention to detail of a careful 
+  programmer (in other words, some of the visual layout is dictated by intent 
+  rather than syntax and beautifiers cannot read minds). Sloppy programmers 
+  should learn to be careful programmers instead of relying on a beautifier to 
+  make their code readable. Finally, since beautifiers are non-trivial programs 
+  that must parse the source, a sophisticated beautifier is not worth the 
+  benefits gained by such a program. Beautifiers are best for gross formatting 
+  of machine-generated code. 
+  <p></p>
+  </li><li>Accidental omission of the second ``='' of the logical compare is a 
+  problem. The following is confusing and prone to error. <pre>        if (abool= bbool) { ... }
+     </pre>Does the programmer really mean assignment here? Often yes, but 
+  usually no. The solution is to just not do it, an inverse Nike philosophy. 
+  Instead use explicit tests and avoid assignment with an implicit test. The 
+  recommended form is to do the assignment before doing the test: <pre><tt>
+       abool= bbool;
+       if (abool) { ... }
+    </tt></pre>
+  <p></p>
+  </li><li>Modern compilers will put variables in registers automatically. Use the 
+  register sparingly to indicate the variables that you think are most critical. 
+  In extreme cases, mark the 2-4 most critical values as register and mark the 
+  rest as REGISTER. The latter can be #defined to register on those machines 
+  with many registers. </li></ul>
+<p>
+</p><hr>
+<a name="const"></a>
+<h2>Be Const Correct </h2>C provides the <i>const</i> key word to allow 
+passing as parameters objects that cannot change to indicate when a method 
+doesn't modify its object. Using const in all the right places is called "const 
+correctness." It's hard at first, but using const really tightens up your coding 
+style. Const correctness grows on you. 
+<a name="streams"></a>
+<p>
+</p><hr>
+<a name="ifdef"></a>
+<h2>Use #if Not #ifdef </h2>Use #if MACRO not #ifdef MACRO. Someone might write 
+code like: <pre>#ifdef DEBUG
+        temporary_debugger_break();
+#endif
+</pre>Someone else might compile the code with turned-of debug info like: <pre>cc -c lurker.cc -DDEBUG=0
+</pre>Alway use #if, if you have to use the preprocessor. This works fine, and 
+does the right thing, even if DEBUG is not defined at all (!) <pre>#if DEBUG
+        temporary_debugger_break();
+#endif
+</pre>If you really need to test whether a symbol is defined or not, test it 
+with the defined() construct, which allows you to add more things later to the 
+conditional without editing text that's already in the program: <pre>#if !defined(USER_NAME)
+ #define USER_NAME "john smith"
+#endif
+</pre>
+<p>
+</p><hr>
+<a name="if0"></a>
+<h2>Commenting Out Large Code Blocks </h2>Sometimes large blocks of code need to 
+be commented out for testing. 
+<h3>Using #if 0 </h3>The easiest way to do this is with an #if 0 block: <pre>   void 
+   example()
+   {
+      great looking code
+
+      #if 0
+      lots of code
+      #endif
+    
+      more code
+    }
+</pre>
+<p>You can't use <b>/**/</b> style comments because comments can't contain 
+comments and surely a large block of your code will contain a comment, won't it? 
+
+</p><p>Don't use #ifdef as someone can unknowingly trigger ifdefs from the compiler 
+command line. 
+<h3use descriptive="" macro="" names="" instead="" of="" 0="" <="" h3the="" problem="" with="" <b="">#if 
+0is that even day later you or anyone else has know idea why this code is 
+commented out. Is it because a feature has been dropped? Is it because it was 
+buggy? It didn't compile? Can it be added back? It's a mystery. 
+</h3use></p><h3>Use Descriptive Macro Names Instead of #if 0 </h3><pre>#if NOT_YET_IMPLEMENTED  
+
+#if OBSOLETE
+
+#if TEMP_DISABLED 
+</pre>
+<h3>Add a Comment to Document Why </h3>Add a short comment explaining why it is 
+not implemented, obsolete or temporarily disabled. 
+<a name="accessor"></a>
+  <pre>&nbsp;</pre>
+
+
+<a name="personas"></a>
+<hr>
+<a name="fext">
+<h2>File Extensions </h2>In short: Use the <i>.h</i> extension for header 
+files and <i>.c </i> for source files. 
+<p>
+</p><p>
+</p><hr>
+</a><a name="nodef"></a>
+<h2>No Data Definitions in Header Files </h2>Do not put data definitions in 
+header files. for example: <pre>/* 
+ * aheader.h 
+ */
+int x = 0;
+</pre>
+<p>
+</p><ol>
+  <li>It's bad magic to have space consuming code silently inserted through the 
+  innocent use of header files. 
+  </li><li>It's not common practice to define variables in the header file so it will 
+  not occur to developers to look for this when there are problems. 
+  </li><li>Consider defining the variable once in a .c file and use an extern 
+  statement to reference it. 
+</li></ol>
+      <p>
+</p><hr>
+<a name="callc"></a>
+<h2>Mixing C and C++ </h2>In order to be backward compatible with dumb linkers 
+  C++'s link time type safety is implemented by encoding type information in 
+  link symbols, a process called <i>name mangling</i>. This creates a problem 
+  when linking to C code as C function names are not mangled. When calling a C 
+  function from C++ the function name will be mangled unless you turn it off. 
+  Name mangling is turned off with the <i>extern "C"</i> syntax. If you want to 
+  create a C function in C++ you must wrap it with the above syntax. If you want 
+  to call a C function in a C library from C++ you must wrap in the above 
+  syntax. Here are some examples:
+<p>
+</p><h3>Calling C Functions from C++ </h3><pre>extern "C" int strncpy(...);
+extern "C" int my_great_function();
+extern "C"
+{
+   int strncpy(...);
+   int my_great_function();
+};
+</pre>
+<h3>Creating a C Function in C++ </h3><pre>extern "C" void
+a_c_function_in_cplusplus(int a)
+{
+}
+</pre>
+<h3><i>__cplusplus</i> Preprocessor Directive </h3>If you have code that must 
+  compile in a C and C++ environment then you must use the <i>__cplusplus</i> 
+  preprocessor directive. For example: 
+<p></p><pre>#ifdef __cplusplus
+
+extern "C" some_function();
+
+#else
+
+extern some_function();
+
+#endif
+</pre>
+<hr>
+<a name="nomagic"></a>
+<h2>No Magic Numbers </h2>A magic number is a bare naked number used in source 
+code. It's magic because no-one has a clue what it means including the author 
+inside 3 months. For example: 
+<p></p><pre>if      (22 == foo) { start_thermo_nuclear_war(); }
+else if (19 == foo) { refund_lotso_money(); }
+else if (16 == foo) { infinite_loop(); }
+else                { cry_cause_im_lost(); }
+</pre>In the above example what do 22 and 19 mean? If there was a number change 
+or the numbers were just plain wrong how would you know? <p? <p="" thing.="" a="" such="" do="" never="" would="" they="" or="" code="" maintain="" to="" had="" has="" nor="" environment="" team="" in="" worked="" programmer="" else.="" anything="" than="" more="" amateur="" an="" as="" marks="" numbers="" magic="" of="" use="" heavy="">Instead of magic numbers use a real name that means something. You can 
+use <i>#define</i> or constants or enums as names. Which one is a design choice. 
+For example: <pre>#define   PRESIDENT_WENT_CRAZY  (22)
+const int WE_GOOFED= 19;
+enum  {
+   THEY_DIDNT_PAY= 16
+};
+
+if      (PRESIDENT_WENT_CRAZY == foo) { start_thermo_nuclear_war(); }
+else if (WE_GOOFED            == foo) { refund_lotso_money(); }
+else if (THEY_DIDNT_PAY       == foo) { infinite_loop(); }
+else                                  { happy_days_i_know_why_im_here(); }
+</pre>Now isn't that better? The const and enum options are preferable because 
+when debugging the debugger has enough information to display both the value and 
+the label. The #define option just shows up as a number in the debugger which is 
+very inconvenient. The const option has the downside of allocating memory. Only 
+you know if this matters for your application. 
+<p>
+</p><hr>
+<a name="errorret"></a>
+<h2>Error Return Check Policy </h2>
+<ul>
+  <li>Check every system call for an error return, unless you know you wish to 
+  ignore errors. For example, <i>printf</i> returns an error code but rarely 
+  would you check for its return code. In which case you can cast the return to 
+  <b>(void)</b> if you really care. 
+  </li><li>Include the system error text for every system error message. 
+  </li><li>Check every call to malloc or realloc unless you know your versions of 
+  these calls do the right thing. You might want to have your own wrapper for 
+  these calls, including new, so you can do the right thing always and 
+  developers don't have to make memory checks everywhere. </li></ul>
+<a name="embedded">
+<p>
+
+  
+
+  </p></a></p?><div id="wrchoverdiv"><div id="wrccontainer" style="background: #a5abb2 url(chrome-extension://gomekmidlodglbbmalcneegieacbdmki/common/skin/img/se_icn_norating.png)"><div id="wrcratingtext">This site has no rating</div><div class="wrclogo"></div></div></div></body></html>

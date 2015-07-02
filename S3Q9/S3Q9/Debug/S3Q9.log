@@ -1,0 +1,16 @@
+﻿Build started 26-May-14 2:27:50 AM.
+     1>Project "D:\MISSION R&D\C ONLINE COURSE\S3Q9\S3Q9\S3Q9.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\S3Q9.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt S3Q9.cpp
+         S3Q9.cpp
+     1>d:\mission r&d\c online course\s3q9\s3q9\s3q9.cpp(53): warning C4715: 'sum_of_elements_array_two_way_recursion' : not all control paths return a value
+     1>d:\mission r&d\c online course\s3q9\s3q9\s3q9.cpp(31): warning C4715: 'sum_of_elements_array_one_way_recursion' : not all control paths return a value
+       Link:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\MISSION R&D\C ONLINE COURSE\S3Q9\Debug\S3Q9.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\MISSION R&D\C ONLINE COURSE\S3Q9\Debug\S3Q9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\MISSION R&D\C ONLINE COURSE\S3Q9\Debug\S3Q9.lib" /MACHINE:X86 Debug\S3Q9.obj
+         Debug\stdafx.obj
+         S3Q9.vcxproj -> D:\MISSION R&D\C ONLINE COURSE\S3Q9\Debug\S3Q9.exe
+     1>Done Building Project "D:\MISSION R&D\C ONLINE COURSE\S3Q9\S3Q9\S3Q9.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.38

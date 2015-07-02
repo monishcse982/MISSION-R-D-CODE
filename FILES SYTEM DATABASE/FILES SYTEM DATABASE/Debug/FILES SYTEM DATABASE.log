@@ -1,0 +1,21 @@
+﻿Build started 21-Jun-14 5:40:49 AM.
+     1>Project "D:\MISSION R&D\C ONLINE COURSE\FILES SYTEM DATABASE\FILES SYTEM DATABASE\FILES SYTEM DATABASE.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt "FILES SYTEM DATABASE.cpp"
+         FILES SYTEM DATABASE.cpp
+     1>d:\mission r&d\c online course\files sytem database\files sytem database\files sytem database.cpp(397): error C2065: 'result_set_index' : undeclared identifier
+     1>d:\mission r&d\c online course\files sytem database\files sytem database\files sytem database.cpp(454): error C2065: 'result_set_index' : undeclared identifier
+     1>d:\mission r&d\c online course\files sytem database\files sytem database\files sytem database.cpp(454): error C2228: left of '.address' must have class/struct/union
+     1>d:\mission r&d\c online course\files sytem database\files sytem database\files sytem database.cpp(506): error C2065: 'result_set' : undeclared identifier
+     1>d:\mission r&d\c online course\files sytem database\files sytem database\files sytem database.cpp(506): error C2065: 'result_set_index' : undeclared identifier
+     1>d:\mission r&d\c online course\files sytem database\files sytem database\files sytem database.cpp(510): error C2065: 'result_set' : undeclared identifier
+     1>d:\mission r&d\c online course\files sytem database\files sytem database\files sytem database.cpp(510): error C2065: 'result_set_index' : undeclared identifier
+     1>d:\mission r&d\c online course\files sytem database\files sytem database\files sytem database.cpp(514): error C2065: 'result_set' : undeclared identifier
+     1>d:\mission r&d\c online course\files sytem database\files sytem database\files sytem database.cpp(531): error C2065: 'result_set_index' : undeclared identifier
+     1>d:\mission r&d\c online course\files sytem database\files sytem database\files sytem database.cpp(548): error C2065: 'result_set_index' : undeclared identifier
+     1>d:\mission r&d\c online course\files sytem database\files sytem database\files sytem database.cpp(549): error C2065: 'result_set_index' : undeclared identifier
+     1>Done Building Project "D:\MISSION R&D\C ONLINE COURSE\FILES SYTEM DATABASE\FILES SYTEM DATABASE\FILES SYTEM DATABASE.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.90
